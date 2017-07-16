@@ -179,7 +179,8 @@ def delete_negative_comment(sendbox_username):  #it deletes the negative comment
         print 'Status code other than 200 received!'
 
 
-def comparision_piechart(username):##function declaration to show number of positive and negative comments and plot a pie-chart
+
+    def comparision_piechart(username):##function declaration to show number of positive and negative comments and plot a pie-chart
     media_id = fetch_post_id(username)
     request_url = (BASE_URL + 'media/%s/comments/?access_token=%s') % (media_id, app_access_token)
     print 'GET request url : %s' % (request_url)
@@ -207,15 +208,21 @@ def comparision_piechart(username):##function declaration to show number of posi
                     print "No. of negative comments: %s" % (b)
                     c = a + b
                     print "Total no. of comments: %s" %(c)
+                    
+                    
                     # Data to plot
+                    
 
+                    import numpy as np
+                    import matplotlib as plt
+                    import matplotlib.pyplot as plt
 
-                    labels = 'red', 'blue'
+                    labels = 'red', 'yellow'
                     sizes = [a, b]
-                    colors = ['red','blue']
-                    plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1%%', shadow=True, startangle=140)
+                    colors = ['red','yellow']
+                    plt.pie(sizes, labels=labels, colors=colors)
                     plt.axis('equal')
-                    plt.show()
+                    plt.show
 
 
 
