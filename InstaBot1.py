@@ -210,20 +210,17 @@ def delete_negative_comment(sendbox_username):  #it deletes the negative comment
                     print "Total no. of comments: %s" %(c)
                     
                     
-                    # Data to plot
-                    
-
-                    import numpy as np
-                    import matplotlib as plt
-                    import matplotlib.pyplot as plt
-
-                    labels = 'red', 'yellow'
+                   
+                    #commands to plot pychart
+                    labels = 'Positive ', 'Negative'
                     sizes = [a, b]
-                    colors = ['red','yellow']
-                    plt.pie(sizes, labels=labels, colors=colors)
+                    colors = ['blanchedalmond', 'aliceblue']
+                    explode = (0.1, 0)  # explode 1st slice
+                    plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+                            autopct='%1.1f%%', shadow=True, startangle=140)
+
                     plt.axis('equal')
                     plt.show()
-
 
 
         else:
