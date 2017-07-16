@@ -222,7 +222,7 @@ def delete_negative_comment(sendbox_username):  #it deletes the negative comment
                     colors = ['red','yellow']
                     plt.pie(sizes, labels=labels, colors=colors)
                     plt.axis('equal')
-                    plt.show
+                    plt.show()
 
 
 
