@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib as plt
 import matplotlib.pyplot as plt
 
-app_access_token = '1554854863.0748575.f695d53f0f9040d59a03e164cc1445e0' #access for instabot
+app_access_token = '1554854863.0748575.f695d53f0f9040d59a03e164cc1445e04d' #access for instabot
 
 BASE_URL = 'https://api.instagram.com/v1/' #api link
 
